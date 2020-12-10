@@ -377,53 +377,53 @@ public void OnPluginStart() {
 
   /** Admin/server commands **/
   RegAdminCmd(
-      "4cloud_loadmatch", Command_LoadMatch, ADMFLAG_CHANGEMAP,
+      "get5_loadmatch", Command_LoadMatch, ADMFLAG_CHANGEMAP,
       "Loads a match config file (json or keyvalues) from a file relative to the csgo/ directory");
   RegAdminCmd(
-      "4cloud_loadmatch_url", Command_LoadMatchUrl, ADMFLAG_CHANGEMAP,
+      "get5_loadmatch_url", Command_LoadMatchUrl, ADMFLAG_CHANGEMAP,
       "Loads a JSON config file by sending a GET request to download it. Requires either the SteamWorks extension.");
-  RegAdminCmd("4cloud_loadteam", Command_LoadTeam, ADMFLAG_CHANGEMAP,
+  RegAdminCmd("get5_loadteam", Command_LoadTeam, ADMFLAG_CHANGEMAP,
               "Loads a team data from a file into a team");
-  RegAdminCmd("4cloud_endmatch", Command_EndMatch, ADMFLAG_CHANGEMAP, "Force ends the current match");
-  RegAdminCmd("4cloud_addplayer", Command_AddPlayer, ADMFLAG_CHANGEMAP,
+  RegAdminCmd("get5_endmatch", Command_EndMatch, ADMFLAG_CHANGEMAP, "Force ends the current match");
+  RegAdminCmd("get5_addplayer", Command_AddPlayer, ADMFLAG_CHANGEMAP,
               "Adds a steamid to a match team");
-  RegAdminCmd("4cloud_removeplayer", Command_RemovePlayer, ADMFLAG_CHANGEMAP,
+  RegAdminCmd("get5_removeplayer", Command_RemovePlayer, ADMFLAG_CHANGEMAP,
               "Removes a steamid from a match team");
-  RegAdminCmd("4cloud_addkickedplayer", Command_AddKickedPlayer, ADMFLAG_CHANGEMAP,
+  RegAdminCmd("get5_addkickedplayer", Command_AddKickedPlayer, ADMFLAG_CHANGEMAP,
               "Adds the last kicked steamid to a match team");
-  RegAdminCmd("4cloud_removekickedplayer", Command_RemoveKickedPlayer, ADMFLAG_CHANGEMAP,
+  RegAdminCmd("get5_removekickedplayer", Command_RemoveKickedPlayer, ADMFLAG_CHANGEMAP,
               "Removes the last kicked steamid from a match team");
-  RegAdminCmd("4cloud_creatematch", Command_CreateMatch, ADMFLAG_CHANGEMAP,
+  RegAdminCmd("get5_creatematch", Command_CreateMatch, ADMFLAG_CHANGEMAP,
               "Creates and loads a match using the players currently on the server as a Bo1");
 
-  RegAdminCmd("4cloud_scrim", Command_CreateScrim, ADMFLAG_CHANGEMAP,
+  RegAdminCmd("get5_scrim", Command_CreateScrim, ADMFLAG_CHANGEMAP,
               "Creates and loads a match using the scrim template");
   RegAdminCmd("sm_scrim", Command_CreateScrim, ADMFLAG_CHANGEMAP,
               "Creates and loads a match using the scrim template");
 
-  RegAdminCmd("4cloud_ringer", Command_Ringer, ADMFLAG_CHANGEMAP,
+  RegAdminCmd("get5_ringer", Command_Ringer, ADMFLAG_CHANGEMAP,
               "Adds/removes a ringer to/from the home scrim team");
   RegAdminCmd("sm_ringer", Command_Ringer, ADMFLAG_CHANGEMAP,
               "Adds/removes a ringer to/from the home scrim team");
 
-  RegAdminCmd("sm_4cloud", Command_Get5AdminMenu, ADMFLAG_CHANGEMAP, "Displays a helper menu");
+  RegAdminCmd("sm_get5", Command_Get5AdminMenu, ADMFLAG_CHANGEMAP, "Displays a helper menu");
 
-  RegAdminCmd("4cloud_forceready", Command_AdminForceReady, ADMFLAG_CHANGEMAP,
+  RegAdminCmd("get5_forceready", Command_AdminForceReady, ADMFLAG_CHANGEMAP,
               "Force readies all current teams");
-  RegAdminCmd("4cloud_forcestart", Command_AdminForceReady, ADMFLAG_CHANGEMAP,
+  RegAdminCmd("get5_forcestart", Command_AdminForceReady, ADMFLAG_CHANGEMAP,
               "Force readies all current teams");
 
-  RegAdminCmd("4cloud_dumpstats", Command_DumpStats, ADMFLAG_CHANGEMAP,
+  RegAdminCmd("get5_dumpstats", Command_DumpStats, ADMFLAG_CHANGEMAP,
               "Dumps match stats to a file");
-  RegAdminCmd("4cloud_listbackups", Command_ListBackups, ADMFLAG_CHANGEMAP,
+  RegAdminCmd("get5_listbackups", Command_ListBackups, ADMFLAG_CHANGEMAP,
               "Lists get5 match backups for the current matchid or a given one");
-  RegAdminCmd("4cloud_loadbackup", Command_LoadBackup, ADMFLAG_CHANGEMAP,
+  RegAdminCmd("get5_loadbackup", Command_LoadBackup, ADMFLAG_CHANGEMAP,
               "Loads a get5 match backup");
-  RegAdminCmd("4cloud_debuginfo", Command_DebugInfo, ADMFLAG_CHANGEMAP,
+  RegAdminCmd("get5_debuginfo", Command_DebugInfo, ADMFLAG_CHANGEMAP,
               "Dumps debug info to a file (addons/sourcemod/logs/get5_debuginfo.txt by default)");
 
   /** Other commands **/
-  RegConsoleCmd("4cloud_status", Command_Status, "Prints JSON formatted match state info");
+  RegConsoleCmd("get5_status", Command_Status, "Prints JSON formatted match state info");
   RegServerCmd(
       "get5_test", Command_Test,
       "Runs get5 tests - should not be used on a live match server since it will reload a match config to test");
